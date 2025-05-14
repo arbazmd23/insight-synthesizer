@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 800 600">
+  <style>
+    .box {
+      fill: #f0f8ff;
+      stroke: #3498db;
+      stroke-width: 2;
+      rx: 10;
+      ry: 10;
+    }
+    .arrow {
+      stroke: #34495e;
+      stroke-width: 2;
+      fill: none;
+      marker-end: url(#arrow);
+    }
+    .title {
+      font-family: Arial, sans-serif;
+      font-size: 24px;
+      font-weight: bold;
+      fill: #2c3e50;
+    }
+    .text {
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      fill: #2c3e50;
+    }
+    .subtext {
+      font-family: Arial, sans-serif;
+      font-size: 10px;
+      fill: #7f8c8d;
+    }
+    .phase {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      font-weight: bold;
+      fill: #2980b9;
+    }
+    .backup {
+      stroke: #e74c3c;
+      stroke-width: 2;
+      stroke-dasharray: 5,5;
+      fill: none;
+      marker-end: url(#arrow-backup);
+    }
+    .backup-box {
+      fill: #ffeeee;
+      stroke: #e74c3c;
+      stroke-width: 2;
+      rx: 10;
+      ry: 10;
+    }
+  </style>
+  
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5"
+        markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#34495e"/>
+    </marker>
+    <marker id="arrow-backup" viewBox="0 0 10 10" refX="9" refY="5"
+        markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#e74c3c"/>
+    </marker>
+  </defs>
+  
+  <text x="400" y="40" text-anchor="middle" class="title">Survey Theme Analyzer Workflow</text>
+  
+  <!-- Phase 1: Data Loading -->
+  <rect x="50" y="80" width="700" height="100" fill="#ecf0f1" rx="10" ry="10" opacity="0.5"/>
+  <text x="80" y="100" class="phase">PHASE 1: DATA LOADING</text>
+  
+  <rect x="100" y="120" width="150" height="40" class="box"/>
+  <text x="175" y="145" text-anchor="middle" class="text">Load responses from CSV</text>
+  
+  <rect x="325" y="120" width="150" height="40" class="box"/>
+  <text x="400" y="145" text-anchor="middle" class="text">Extract from JSON</text>
+  
+  <rect x="550" y="120" width="150" height="40" class="box"/>
+  <text x="625" y="138" text-anchor="middle" class="text">Clean responses</text>
+  <text x="625" y="153" text-anchor="middle" class="subtext">(Remove duplicates, empty)</text>
+  
+  <path d="M 250 140 L 325 140" class="arrow"/>
+  <path d="M 475 140 L 550 140" class="arrow"/>
+  
+  <!-- Phase 2: Theme Extraction -->
+  <rect x="50" y="200" width="700" height="120" fill="#ecf0f1" rx="10" ry="10" opacity="0.5"/>
+  <text x="80" y="220" class="phase">PHASE 2: THEME EXTRACTION</text>
+  
+  <rect x="100" y="240" width="150" height="60" class="box"/>
+  <text x="175" y="265" text-anchor="middle" class="text">Generate LLM prompt</text>
+  <text x="175" y="280" text-anchor="middle" class="subtext">for dominant theme</text>
+  
+  <rect x="325" y="240" width="150" height="60" class="box"/>
+  <text x="400" y="265" text-anchor="middle" class="text">Extract theme using LLM</text>
+  <text x="400" y="280" text-anchor="middle" class="subtext">(title, sentiment, explanation)</text>
+  
+  <rect x="550" y="250" width="150" height="40" class="backup-box"/>
+  <text x="625" y="273" text-anchor="middle" class="text">Backup theme extraction</text>
+  
+  <path d="M 250 270 L 325 270" class="arrow"/>
+  <path d="M 475 270 L 550 270" class="backup"/>
+  
+  <!-- Phase 3: Quote Selection -->
+  <rect x="50" y="340" width="700" height="120" fill="#ecf0f1" rx="10" ry="10" opacity="0.5"/>
+  <text x="80" y="360" class="phase">PHASE 3: QUOTE SELECTION</text>
+  
+  <rect x="100" y="380" width="150" height="60" class="box"/>
+  <text x="175" y="405" text-anchor="middle" class="text">Generate LLM prompt</text>
+  <text x="175" y="420" text-anchor="middle" class="subtext">for supporting quotes</text>
+  
+  <rect x="325" y="380" width="150" height="60" class="box"/>
+  <text x="400" y="405" text-anchor="middle" class="text">Extract quotes using LLM</text>
+  <text x="400" y="420" text-anchor="middle" class="subtext">(verify against original)</text>
+  
+  <rect x="550" y="390" width="150" height="40" class="backup-box"/>
+  <text x="625" y="413" text-anchor="middle" class="text">Backup quote selection</text>
+  
+  <path d="M 250 410 L 325 410" class="arrow"/>
+  <path d="M 475 410 L 550 410" class="backup"/>
+  
+  <!-- Phase 4: Output Generation -->
+  <rect x="50" y="480" width="700" height="100" fill="#ecf0f1" rx="10" ry="10" opacity="0.5"/>
+  <text x="80" y="500" class="phase">PHASE 4: OUTPUT GENERATION</text>
+  
+  <rect x="100" y="520" width="150" height="40" class="box"/>
+  <text x="175" y="545" text-anchor="middle" class="text">Generate JSON output</text>
+  
+  <rect x="325" y="520" width="150" height="40" class="box"/>
+  <text x="400" y="545" text-anchor="middle" class="text">Create visualization</text>
+  
+  <rect x="550" y="520" width="150" height="40" class="box"/>
+  <text x="625" y="545" text-anchor="middle" class="text">Generate text report</text>
+  
+  <path d="M 250 540 L 325 540" class="arrow"/>
+  <path d="M 475 540 L 550 540" class="arrow"/>
+  
+  <!-- Vertical connections -->
+  <path d="M 400 160 L 400 240" class="arrow"/>
+  <path d="M 400 300 L 400 380" class="arrow"/>
+  <path d="M 400 440 L 400 520" class="arrow"/>
+</svg>

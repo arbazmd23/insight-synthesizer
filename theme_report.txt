@@ -1,0 +1,24 @@
+SURVEY ANALYSIS REPORT
+=====================
+
+Total Responses Analyzed: 58
+Overall Sentiment: Neutral
+
+DOMINANT THEME: . First, I need to go through each response and note the common points.
+Sentiment: Positive
+Explanation: would be that users are prioritizing cost-effectiveness and value for money, which is crucial for startups with limited budgets.
+</think>
+
+SUPPORTING QUOTES:
+1. The pricing has to be startup friendly. I can't spend thousands on research.
+2. I want to send a research link to a community and track the responses easily.
+3. I want the ability to run small quick surveys without a big learning curve.
+4. I want reminders sent automatically to participants who havent responded.
+5. I want notifications when responses come in. Helps me act fast.
+6. It would be great if insights could be exported into Google Sheets automatically.
+7. I want the ability to clone previous research projects.
+8. I love the vision democratize access to fast, quality product validation.
+9. The idea of connecting directly with SMEs through the platform sounds amazing.
+10. I want the AI to suggest personas to target for my product category.
+11. Make sure the AI summaries dont sound robotic or generic.
+12. The tone of the AI-generated summaries has to match my brand voice.
